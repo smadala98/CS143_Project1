@@ -16,10 +16,10 @@ Below is a text box for you to input a SQL SELECT Query.<br>
 
 
  <body>
-<form action="query.php" method="GET"> <!-- When the form is submitted, send form data to this php script for processing -->
-	<textarea name="query" rows="10" cols="100"></textarea> <br>
-	<input type="submit"  value="Submit"/>
-</form>
+ <form action="query.php" method="GET">
+      <textarea name="query" cols="60" rows="8"><?php print "$query" ?></textarea><br /> <!-- Default form provided-->
+      <input type="submit" value="Submit" />
+   </form>
 
 
 
@@ -38,7 +38,7 @@ Below is a text box for you to input a SQL SELECT Query.<br>
 	echo '<h1> Results From Query: </h1>';
 ?>
 
-<table border='1'>
+<table border='2'>
 
 	<tr> <!--This is for the column names of the query--->
 	<?php
