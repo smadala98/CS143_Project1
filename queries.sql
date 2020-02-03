@@ -12,7 +12,7 @@ AS derived_table;
 SELECT title FROM Movie WHERE id = ANY
        (SELECT mid FROM Sales WHERE ticketsSold > 1000000);
 
--- Director(s)' names that direct'(s) the largest number of movies.
+-- Director(s)' names that direct(s) the largest number of movies.
 SELECT CONCAT(first, ' ', last) FROM Director WHERE id = ANY
        (SELECT did FROM MovieDirector GROUP BY did HAVING COUNT(did) =
        	       (SELECT COUNT(*) AS num FROM MovieDirector GROUP BY did
